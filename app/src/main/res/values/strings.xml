@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RecorderAudio</string>
+    <string name="audio_started_recording">Recording started!</string>
+    <string name="alert_fail_recording">You are not recording right now!</string>
+    <string name="audio_timer_stop">Stopped!</string>
+    <string name="msg_record">Record a new audio</string>
+    <string name="msg_description">The file will be saved in the \'Audio_Record\' directory</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_save">Open Audio</string>
+    <string name="tap_to_start_recording">Tap to start recording</string>
+    <string name="tap_to_stop_recording">Tap to stop recording</string>
+</resources>

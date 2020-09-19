@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/color_white">
+    <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+        <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="22sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:text="@string/msg_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:gravity="center"
+                android:layout_marginBottom="30dp"
+                android:textSize="16sp"
+                android:text="@string/msg_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <com.example.recorderaudio.ui.view.CircularProgressView
+                        android:id="@+id/progressView"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        app:animate="true"
+                        app:animateDuration="600"
+                        app:fillColor="@color/colorPrimary"
+                        app:progressValue="0"
+                        app:progressColor="#FFF"
+                        app:progressInterpolator="@android:anim/accelerate_decelerate_interpolator"
+                        app:progressRoundCap="true"
+                        app:progressTextColor="#FFF"
+                        app:progressTextEnabled="true"
+                        app:progressTextSize="55sp"
+                        app:progressTextType="progress"
+                        app:progressWidth="3dp"
+                        app:startAngle="270"
+                        app:totalValue="60"
+                        app:totalColor="@color/colorPrimary"
+                        app:totalWidth="8dp"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" tools:ignore="DisableBaselineAlignment">
+
+                <LinearLayout
+                        android:id="@+id/lv_clear"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" tools:ignore="NestedWeights">
+
+                    <ImageButton
+                            android:id="@+id/iv_btn_clear"
+                            android:background="?selectableItemBackgroundBorderless"
+                            app:srcCompat="@drawable/ic_remove_audio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:ignore="ContentDescription"/>
+                    <TextView
+                            android:layout_marginTop="21dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/color_txt"
+                            android:text="@string/txt_cancel"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/lv_save"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <ImageButton
+                            android:id="@+id/iv_btn_save"
+                            android:background="?selectableItemBackgroundBorderless"
+                            app:srcCompat="@drawable/ic_save_audio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:layout_marginTop="21dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/color_txt"
+                            android:text="@string/txt_save"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/lv_start"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <ImageButton
+                            android:id="@+id/iv_btn_start"
+                            android:background="?selectableItemBackgroundBorderless"
+                            app:srcCompat="@drawable/ic_start_audio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:layout_marginTop="21dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/color_txt"
+                            android:text="@string/tap_to_start_recording"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lv_stop"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageButton
+                            android:id="@+id/iv_btn_stop"
+                            android:background="?selectableItemBackgroundBorderless"
+                            app:srcCompat="@drawable/ic_stop_audio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:layout_marginTop="21dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/color_txt"
+                            android:text="@string/tap_to_stop_recording"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
